@@ -24,4 +24,6 @@ class ColorManager {
 
   static var selectedNavBarColor = Colors.cyan[800]!;
   static const unselectedNavBarColor = Colors.black87;
+
+  static const textFieldBorderCorlor = Colors.black38;
 }
