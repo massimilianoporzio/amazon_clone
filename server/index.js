@@ -8,13 +8,14 @@ require('dotenv').config()
 //IMPORT FROM OTHER FILES
 const authRouter = require('./routes/auth');
 //INIT
-const PORT = 3000; //porta in ascolto
+const PORT = 3333; //porta in ascolto
 const DB = process.env.DB_URI;
 
 const app = express();
 //middleware
 //CLIENT -> MIDDLEWARE -> SERVER -> MIDDLEWARE -> CLIENT
-app.use(authRouter.authRouter);
+app.use(express.json());
+app.use(authRouter);
 
 //connections
 mongoose.connect(DB).then(()=>{
