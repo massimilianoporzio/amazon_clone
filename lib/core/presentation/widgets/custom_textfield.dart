@@ -29,7 +29,9 @@ class CustomTextField extends StatelessWidget {
         ),
       ),
       //textFormField ha validator
-      validator: (value) {},
+      validator: (value) {
+        return null;
+      },
     );
   }
 }
